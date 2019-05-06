@@ -1,23 +1,6 @@
 // tslint:disable:max-classes-per-file
 
-import { Memoize } from "../src";
-
-class CustomError extends Error {}
-
-class Test {
-	public called = 0;
-
-	@Memoize()
-	public fn(arg: number) {
-		this.called += 1;
-		return arg;
-	}
-
-	@Memoize()
-	public error() {
-		throw new CustomError();
-	}
-}
+import { DisgustingFlavorError, Test } from "./classes";
 
 describe("function", () => {
 	it("works", () => {
@@ -48,9 +31,26 @@ describe("function", () => {
 	});
 
 	it("throws errors", () => {
-		const test1 = new Test();
-		const test2 = new Test();
-		expect(() => test1.error()).toThrow(CustomError);
-		expect(() => test2.error()).toThrow(CustomError);
+		const test = new Test();
+
+		expect(() => {
+			test.drinkFlavor("octopus");
+		}).toThrowError(/yuck/);
+
+		expect(() => {
+			test.drinkFlavor("octopus");
+		}).toThrowError("yuck");
+
+		expect(() => {
+			test.drinkFlavor("octopus");
+		}).toThrowError(/^yuck, octopus flavor$/);
+
+		expect(() => {
+			test.drinkFlavor("octopus");
+		}).toThrowError(new Error("yuck, octopus flavor"));
+
+		expect(() => {
+			test.drinkFlavor("octopus");
+		}).toThrowError(DisgustingFlavorError);
 	});
 });
