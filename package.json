@@ -10,7 +10,7 @@
 		"type": "git",
 		"url": "git@github.com:typeskrift/moize-decorator.git"
 	},
-	"license": "MIT",
+	"license": "MPL-2.0",
 	"author": "Brian Faust <hello@basecode.sh>",
 	"files": [
 		"dist"
