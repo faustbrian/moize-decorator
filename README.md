@@ -6,7 +6,7 @@
 [![Node Engine](https://badgen.now.sh/npm/node/@typeskrift/moize-decorator)](https://www.npmjs.com/package/@typeskrift/moize-decorator)
 [![Build Status](https://badgen.now.sh/circleci/github/typeskrift/moize-decorator)](https://circleci.com/gh/typeskrift/moize-decorator)
 [![Codecov](https://badgen.now.sh/codecov/c/github/typeskrift/moize-decorator)](https://codecov.io/gh/typeskrift/moize-decorator)
-[![License: MPL-2.0](https://badgen.now.sh/badge/license/MPL-2.0/green)](https://mozilla.org/MPL/2.0/)
+[![License: MPL-2.0](https://badgen.now.sh/badge/license/MPL-2.0/green)](https://mozilla.org/MPL/2.0/) [![Greenkeeper badge](https://badges.greenkeeper.io/typeskrift/moize-decorator.svg)](https://greenkeeper.io/)
 
 ## Installation
 
