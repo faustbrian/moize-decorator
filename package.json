@@ -67,7 +67,7 @@
 		"moize": "^5.4.4"
 	},
 	"devDependencies": {
-		"@sindresorhus/tsconfig": "^0.3.0",
+		"@sindresorhus/tsconfig": "^0.4.0",
 		"@types/jest": "^24.0.12",
 		"@types/node": "^12.0.0",
 		"@types/prettier": "^1.16.3",
