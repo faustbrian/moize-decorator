@@ -22,7 +22,7 @@
 		"build:watch": "yarn build -w",
 		"clean": "rimraf .coverage dist tmp",
 		"format": "yarn lint && yarn prettier",
-		"lint": "tslint -c tslint.json 'src/**/*.ts' --fix",
+		"lint": "tslint -c tslint.json -p tslint-project.json 'src/**/*.ts' --fix",
 		"prepublishOnly": "yarn format && yarn test && yarn build",
 		"prettier": "prettier --write \"./*.{ts,js,json,md}\" \"./**/*.{ts,js,json,md}\"",
 		"test": "jest",
