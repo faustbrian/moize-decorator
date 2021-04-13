@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/unbound-method */
+
 import moize from "moize";
 
 export function Memoize() {
@@ -14,7 +16,7 @@ export function Memoize() {
 }
 
 function newFunction(name: string, fn: () => any) {
-	return function(this: any, ...args: any[]) {
+	return function (this: any, ...args: any[]) {
 		const bound = fn.bind(this);
 		// @ts-ignore
 		const value = (moize as (...args: any[]) => (...args: any[]) => any)(bound);
@@ -24,7 +26,7 @@ function newFunction(name: string, fn: () => any) {
 }
 
 function newGetter(name: string, fn: () => any) {
-	return function(this: any) {
+	return function (this: any) {
 		const value = fn.apply(this);
 		Object.defineProperty(this, name, { value });
 		return value;

@@ -1,21 +1,4 @@
 {
-	"extends": "@sindresorhus/tsconfig",
-	"compilerOptions": {
-		"alwaysStrict": false,
-		"experimentalDecorators": true,
-		"incremental": true,
-		"lib": ["es2018"],
-		"module": "commonjs",
-		"moduleResolution": "node",
-		"outDir": "dist",
-		"removeComments": true,
-		"resolveJsonModule": true,
-		"sourceMap": true,
-		"strict": false,
-		"strictNullChecks": true,
-		"target": "es5",
-		"typeRoots": ["node_modules/@types"]
-	},
-	"include": ["src/**/**.ts"],
-	"exclude": ["node_modules", "dist", "**/*.spec.ts", "**/*.test.ts"]
+	"extends": "./node_modules/@konceiver/tease/config/tsconfig.json",
+	"include": ["src/**/*"]
 }

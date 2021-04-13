@@ -1,87 +1,35 @@
 {
-    "name": "@typeskrift/moize-decorator",
-    "version": "0.1.0",
-    "description": "A TypeScript decorator for memoizing properties using fast-memoize.",
-    "homepage": "https://github.com/typeskrift/moize-decorator",
-    "bugs": {
-        "url": "https://github.com/typeskrift/moize-decorator/issues"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:typeskrift/moize-decorator.git"
-    },
-    "license": "MIT",
-    "author": "Brian Faust <brian@konceiver.dev>",
-    "files": [
-        "dist"
-    ],
-    "main": "dist/index",
-    "types": "dist/index",
-    "scripts": {
-        "build": "yarn clean && tsc",
-        "build:watch": "yarn build -w",
-        "clean": "rimraf .coverage dist tmp",
-        "format": "yarn lint && yarn prettier",
-        "lint": "tslint -c tslint.json -p tslint-project.json 'src/**/*.ts' --fix",
-        "prepublishOnly": "yarn build",
-        "prettier": "prettier --write \"./*.{ts,js,json,md}\" \"./**/*.{ts,js,json,md}\"",
-        "test": "jest",
-        "test:watch": "jest --watchAll"
-    },
-    "jest": {
-        "bail": true,
-        "collectCoverage": true,
-        "collectCoverageFrom": [
-            "src/**/*.ts",
-            "!**/node_modules/**"
-        ],
-        "coverageDirectory": "<rootDir>/.coverage",
-        "coverageReporters": [
-            "json",
-            "lcov",
-            "text",
-            "clover",
-            "html"
-        ],
-        "moduleFileExtensions": [
-            "ts",
-            "tsx",
-            "js",
-            "jsx",
-            "json",
-            "node"
-        ],
-        "setupFilesAfterEnv": [
-            "jest-extended"
-        ],
-        "testEnvironment": "node",
-        "testMatch": [
-            "**/*.test.ts"
-        ],
-        "transform": {
-            "^.+\\.tsx?$": "ts-jest"
-        },
-        "verbose": true
-    },
-    "dependencies": {
-        "moize": "^5.4.7"
-    },
-    "devDependencies": {
-        "@sindresorhus/tsconfig": "^0.8.0",
-        "@types/jest": "^26.0.19",
-        "@types/node": "^14.14.13",
-        "@types/prettier": "^2.1.5",
-        "@types/rimraf": "^3.0.0",
-        "@yarnpkg/pnpify": "^2.4.0",
-        "codecov": "^3.8.1",
-        "jest": "^26.6.3",
-        "jest-extended": "^0.11.5",
-        "prettier": "^2.2.1",
-        "rimraf": "^3.0.2",
-        "ts-jest": "^26.4.4",
-        "tslint": "^5.20.1",
-        "tslint-config-prettier": "^1.18.0",
-        "typescript": "^4.1.3",
-        "typescript-language-server": "^0.4.0"
-    }
+	"name": "@typeskrift/moize-decorator",
+	"version": "0.1.0",
+	"description": "A TypeScript decorator for memoizing properties using fast-memoize.",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:typeskrift/moize-decorator.git"
+	},
+	"author": "Brian Faust <brian@konceiver.dev>",
+	"homepage": "https://github.com/typeskrift/moize-decorator",
+	"bugs": {
+		"url": "https://github.com/typeskrift/moize-decorator/issues"
+	},
+	"main": "dist/index",
+	"scripts": {
+		"build": "tease build",
+		"format": "tease format",
+		"lint": "tease lint",
+		"prepare": "tease install && tease build",
+		"publish": "npm run prepare && npm publish --access=public",
+		"specs": "tease specs",
+		"test": "tease test"
+	},
+	"files": [
+		"dist"
+	],
+	"dependencies": {
+		"moize": "^5.4.7"
+	},
+	"devDependencies": {
+		"@konceiver/tease": "^2.0.0"
+	},
+	"types": "dist/index"
 }
