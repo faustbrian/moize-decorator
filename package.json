@@ -26,10 +26,10 @@
 		"dist"
 	],
 	"dependencies": {
-		"moize": "^5.4.7"
+		"moize": "^6.0.1"
 	},
 	"devDependencies": {
-		"@konceiver/tease": "^2.0.0"
+		"@konceiver/tease": "^2.0.1"
 	},
 	"types": "dist/index"
 }
